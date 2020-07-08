@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular10Capita"
+    }
+  },
+  "defaultProject": "Angular10Capita",
+  "cli": {
+    "analytics": "cdbe3855-f0d4-4da4-86e9-6bffd1496ff7"
+  }
 }

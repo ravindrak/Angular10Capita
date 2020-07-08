@@ -1,0 +1,47 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+        <div class="row">
+            <table class="table table-hover">
+                <tr>
+                    <td><label for="description">Description</label></td>
+                    <td><input
+                        type="text"
+                        class="form-control"
+                        id="description"
+                        required
+                        [(ngModel)]="task.description"
+                        name="description"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="priority">Priority</label></td>
+                    <td><input
+                        class="form-control"
+                        id="priority"
+                        required
+                        [(ngModel)]="task.priority"
+                        name="priority"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="status">Status</label></td>
+                    <td><input
+                        class="form-control"
+                        id="status"
+                        required
+                        [(ngModel)]="task.status"
+                        name="status"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td><td><button (click)="saveTask()" class="btn btn-success vspace">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newTask()">Add</button>
+    </div>
+  </div>
